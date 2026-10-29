@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f1">
+  <title>Consumer Profile | Zero Latency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="profile-pages.css">
+  <script>(()=>{const key='zero_latency_theme',stored=localStorage.getItem(key),mode=['light','dark','system'].includes(stored)?stored:'system',dark=mode==='dark'||(mode==='system'&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=dark?'dark':'light';document.documentElement.dataset.themeMode=mode;})();</script>
+  <script src="profile-pages.js" defer></script>
+</head>
+<body data-profile-role="consumer">
+  <header class="site-header">
+    <a class="brand" href="index%20(5).html#home" aria-label="Zero Latency home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M18.7 2.5 7.2 17.1h7.3l-1.2 12.4 11.5-16h-7.2z" fill="currentColor"></path></svg></span><span>zero latency<span class="brand-period">.</span></span></a>
+    <div class="header-actions"><button class="theme-toggle back-link" type="button" data-theme-toggle><span class="theme-toggle-icons" aria-hidden="true">◐</span><span class="theme-toggle-label">System</span></button><a class="back-link" href="index%20(5).html#home">Home</a><button class="logout-button" id="logout-profile" type="button">Log out</button></div>
+  </header>
+  <main>
+    <nav class="profile-navigation" aria-label="Profile navigation">
+      <a class="back-link" href="index%20(5).html#home" data-profile-return="home">← Back to Home</a>
+    </nav>
+    <p class="page-status" id="page-status" role="status" aria-live="polite">Loading your profile…</p>
+    <button class="logout-button" id="retry-profile" type="button" hidden>Try again</button>
+    <div class="profile-view" id="profile-view" hidden>
+      <header class="profile-heading"><p class="eyebrow">Consumer account</p><h1 id="profile-name">Welcome back</h1><p class="profile-email" id="profile-email"></p></header>
+      <section class="profile-section" id="strikes" aria-labelledby="strikes-title"><div class="section-heading"><h2 id="strikes-title">Strikes</h2><p class="strike-count" id="consumer-strike-count"></p></div><div class="record-list" id="consumer-strike-list"></div></section>
+      <section class="profile-section" id="bookings" aria-labelledby="bookings-title"><div class="section-heading"><h2 id="bookings-title">Bookings</h2><p>Most recent first · expand a booking for details</p></div><div class="booking-list" id="booking-list"></div></section>
+    </div>
+  </main>
+  <footer class="page-footer"><span>Zero Latency · Consumer profile</span><a href="index%20(5).html#home">Return to homepage</a></footer>
+</body>
+</html>
